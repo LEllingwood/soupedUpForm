@@ -1,0 +1,44 @@
+#user-create-form{
+ background-color: aquamarine;   
+ text-shadow: 0 0 2px gray;
+ width: 50%;
+ border-color: maroon;
+ border-style: outset;
+}
+
+p{
+    justify-content: center;
+    font-variant-caps: titling-caps;
+    font-size: larger;
+}
+
+body{
+    background-color: grey;
+    display:  flex;
+    justify-content: center;
+}
+
+#firstname{
+    border-style: outset;
+}
+#lastname{
+    border-style: outset;
+}
+#username{
+    border-style: outset;
+}
+#email{
+    border-style: outset;
+}
+#mobilephone{
+    border-style: outset;
+}
+#socialmedia{
+    border-style: outset;
+}
+#resStartDate{
+    border-style: outset;
+}
+#resEndDate{
+    border-style: outset;
+}

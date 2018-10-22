@@ -1,25 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Create User</title>
-    <link href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form id="user-create-form" action="./api/user" method="post">
-Email:<br>
-<input type="text" name="email" id="email"><br>
-Username: <br>
-<input type="text" name="username" id="username"><br>
-First name:<br>
-<input type="text" name="firstname" id="firstname"><br>
-Last name:<br>
-<input type="text" name="lastname" id="lastname"> <br>
+        <p id="header">New User</p>
+    
+        <fieldset>
+            <legend>Name</legend>
+            First name:<br>
+            <input type="text" name="firstname" id="firstname" autofocus><br>
+            Last name:<br>
+            <input type="text" name="lastname" id="lastname"> <br>
+            Username: <br>
+            <input type="text" name="username" id="username"><br>
+            User type:<br>
+            <select id="usertype" name="usertype" disabled>
+                <option>User</option>
+                <option>Moderator</option>
+                <option>Administrator</option>
+                <option>Boss</option>
+            </select>
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+        Email:<br>
+        <input type="email" name="email" id="email"><br>
+        Mobile phone:<br>
+        <input type="tel" name="mobilephone" id="mobilephone"><br>
+        Homepage or Social Media Link:<br>
+        <input type="url" name="socialmedia" id="socialmedia"><br>
+
+    </fieldset>
+        <fieldset>
+            <legend>What is your preferred method of communication?</legend>
+            <ul>
+                <li>
+                    <label for="usePhone">Phone</label>
+                    <input type="radio" check id="usePhone" name="coms" value="usePhone">
+                </li>
+                <li>
+                    <label for="useEmail">Email</label>
+                    <input type="radio" check id="useEmail" name="coms" value="useEmail">
+                </li>
+                <li>
+                    <label for="usmail">U.S. Mail</label>
+                    <input type="radio" check id="usmail" name="coms" value="usmail">
+                </li>
+            </ul>
+        </fieldset>
+        <br>
+        <br>
+        <fieldset>
+            <legend>What is your preferred device?</legend>
+            <ul>
+                <li>
+                    <label for="iOS">iOS</label>
+                    <input type="checkbox" check id="iOS" name="iOS" value="iOS">
+                </li>
+                <li>
+                    <label for="Android">Android</label>
+                    <input type="checkbox" check id="Android" name="Android" value="Android">
+                </li>
+                <li>
+                    <label for="Mac">Mac</label>
+                    <input type="checkbox" check id="Mac" name="Mac" value="Mac">
+                </li>
+                <li>
+                    <label for="Windows">Windows</label>
+                    <input type="checkbox" check id="Windows" name="Windows" value="Windows">
+                </li>
+            </ul>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>
+                <label for="resStartDate">Indicate your desired reservation starting date</label>
+                <input type="date" name="resDate" min="2018-12-31" max="2019-12-31" id="resStartDate">
+                <label for="resEndDate">Indicate your desired reservation ending date</label>
+                <input type="date" name="resDate" min="2018-12-31" max="2019-12-31" id="resEndDate">
+            </legend>
+        </fieldset>
 
         <button type="submit">Create User</button>
+        <button type="reset">Reset</button>
     </form>
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
+
+<!-- <button type="reset" value="Reset">Reset</button> -->
+
+<!-- <fieldset class="borderBox">Favorite Color: <input type="color" id="color" name="favcolor" value="#ff0000"></fieldset> (this does the color wheel) -->
